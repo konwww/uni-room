@@ -102,22 +102,28 @@
 			"style": {}
 		}
 	    ,{
-            "path" : "pages/city/city",
+            "path" : "pages/index/index",
             "style" : {}
         }
         ,{
-            "path" : "pages/city/building",
+            "path" : "pages/index/building",
             "style" : {}
         } ,{
-            "path" : "pages/city/floor",
+            "path" : "pages/index/floor",
             "style" : {}
         },{
-            "path" : "pages/city/room",
+            "path" : "pages/index/room",
             "style" : {}
         },{
-            "path" : "pages/city/quickChoose",
+            "path" : "pages/index/mark",
             "style" : {}
-        }
+        },{
+            "path" : "pages/index/timeTable",
+            "style" : {}
+        },
+		{
+			"path":"pages/w-picker-demo/w-picker-demo"
+		}
     ],
 	"globalStyle": {
 		"mp-alipay": {

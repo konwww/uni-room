@@ -55,7 +55,10 @@
         }
     },
     "h5" : {
-        "title" : "ColorUi for UniApp",
-        "domain" : "demo.color-ui.com"
+        "title" : "小黑板",
+        "domain" : "blackboard.finspace.top",
+        "devServer" : {
+            "https" : false
+        }
     }
 }

@@ -1,42 +1,55 @@
 <template>
 	<view>
-		<basics v-if="PageCur=='basics'"></basics>
-		<components v-if="PageCur=='component'"></components>
-		<plugin v-if="PageCur=='plugin'"></plugin>
-		<view class="cu-bar tabbar bg-white shadow foot">
-			<view class="action" @click="NavChange" data-cur="basics">
-				<view class='cuIcon-cu-image'>
-					<image :src="'/static/tabbar/basics' + [PageCur=='basics'?'_cur':''] + '.png'"></image>
-				</view>
-				<view :class="PageCur=='basics'?'text-green':'text-gray'">元素</view>
+		<view class="cu-bar bg-white solid-bottom">
+			<view class="action">
+				<text class='cuIcon-title text-blue'></text>选择你所在的校区
 			</view>
-			<view class="action" @click="NavChange" data-cur="component">
-				<view class='cuIcon-cu-image'>
-					<image :src="'/static/tabbar/component' + [PageCur == 'component'?'_cur':''] + '.png'"></image>
+		</view>
+		<view v-for="(item,index) in items" :key="index">
+			<navigator v-bind:url="item.link" open-type="navigate">
+				<view class="bg-img bg-mask flex align-center margin-xs" style="height: 400upx;" v-bind:style="{background:'url('+item.url+')',backgroundSize:'cover'}">
+					<view class="padding-xl text-white">
+						<view class="padding-xs text-xxl text-bold">
+							{{item.title}}
+						</view>
+						<view class="padding-xs text-sm">
+							{{item.tip}}
+						</view>
+					</view>
 				</view>
-				<view :class="PageCur=='component'?'text-green':'text-gray'">组件</view>
-			</view>
-			<view class="action" @click="NavChange" data-cur="plugin">
-				<view class='cuIcon-cu-image'>
-					<image :src="'/static/tabbar/plugin' + [PageCur == 'plugin'?'_cur':''] + '.png'"></image>
-				</view>
-				<view :class="PageCur=='plugin'?'text-green':'text-gray'">扩展</view>
-			</view>
+			</navigator>
 		</view>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
-		return {
-				PageCur: 'basics'
+			return {
+				items: [{
+						tip: "追求真理",
+						color: "red",
+						title: "雅安",
+						url: "/static/yaan.jpg",
+						link: "./building"
+					},
+					{
+						tip: "造福社会",
+						color: "red",
+						title: "成都",
+						url: "/static/chengdu.jpg",
+						link: "./building"
+					}, {
+						tip: "自强不息",
+						color: "red",
+						title: "都江堰",
+						url: "/static/dujiangyan.jpg",
+						link: "./building"
+					},
+				]
 			}
 		},
 		methods: {
-			NavChange: function(e) {
-				this.PageCur = e.currentTarget.dataset.cur
-			}
+
 		}
 	}
 </script>
