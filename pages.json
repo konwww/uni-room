@@ -120,10 +120,17 @@
         },{
             "path" : "pages/index/timeTable",
             "style" : {}
-        },
-		{
-			"path":"pages/w-picker-demo/w-picker-demo"
-		}
+        }
+        ,{
+            "path" : "pages/index/user",
+            "style" : {}
+        },{
+            "path" : "pages/index/login",
+            "style" : {}
+        },{
+            "path" : "pages/index/info",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"mp-alipay": {
@@ -131,10 +138,11 @@
 			"transparentTitle": "always",
 			"allowsBounceVertical": "NO"
 		},
-		"navigationBarBackgroundColor": "#0081ff",
-		"navigationBarTitleText": "ColorUi for UniApp",
-		"navigationStyle": "custom",
-		"navigationBarTextStyle": "white"
+		"navigationBarBackgroundColor": "#333333",
+		"navigationBarTitleText": "小黑板",
+		"navigationStyle": "default",
+		"navigationBarTextStyle": "white",
+		"navigationBarShadow":"grey"
 	},
 	"usingComponts": true,
 		"condition": { //模式配置，仅开发期间生效

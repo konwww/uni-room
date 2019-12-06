@@ -30,26 +30,36 @@
 						color: "red",
 						title: "雅安",
 						url: "/static/yaan.jpg",
-						link: "./building"
+						link: "./building?city=雅安"
 					},
 					{
 						tip: "造福社会",
 						color: "red",
 						title: "成都",
 						url: "/static/chengdu.jpg",
-						link: "./building"
+						link: "./building?city=成都"
 					}, {
 						tip: "自强不息",
 						color: "red",
 						title: "都江堰",
 						url: "/static/dujiangyan.jpg",
-						link: "./building"
+						link: "./building?city=都江堰"
 					},
 				]
 			}
 		},
 		methods: {
-
+			onReady(){
+				uni.request({
+					url:"https://openapi.yiban.cn/oauth/access_token",
+					data:{
+						client_id:"",
+						cliend_secret:"",
+						code:"",
+						redirect_uri:""
+					}
+				})
+			}
 		}
 	}
 </script>
