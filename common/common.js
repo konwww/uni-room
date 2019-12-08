@@ -1,5 +1,6 @@
 // const HOST = "http://bb.test.com";
-const HOST = "http://bb.test.com";
+// const HOST = "http://bb.test.com";
+const HOST="http://blackboard.finspace.top"
 export default {
 	HOST,
 	setWeekInfo

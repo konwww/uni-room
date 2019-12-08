@@ -12,9 +12,8 @@
 						</view>
 					</view>
 					<view class="flex flex-wrap justify-around">
-						<navigator v-for="(classroom, key) in item.classroom" :key="key" v-bind:url="'classroom?rid=' + classroom.rid">
-							<view @tap="linkTo('./timeTable?id='+classroom.rid)" class="padding-sm margin-sm radius shadow" v-bind:class="'bg-' + item.color">{{ classroom.houseNum }}</view>
-						</navigator>
+						<view v-for="(classroom, key) in item.classroom" :key="key" @tap="linkTo('./timeTable?id='+classroom.rid)" class="padding-sm margin-sm radius shadow"
+						 v-bind:class="'bg-' + item.color">{{ classroom.houseNum }}</view>
 					</view>
 				</view>
 				<view class="flex justify-center margin-top-xl">
@@ -245,7 +244,7 @@
 			}
 		}
 	};
-	
+
 	function getColor() {
 		var index = parseInt(Math.random() * 14);
 		return color[index];

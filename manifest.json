@@ -59,6 +59,9 @@
         "domain" : "blackboard.finspace.top",
         "devServer" : {
             "https" : false
+        },
+        "router" : {
+            "base" : "/m/"
         }
     }
 }
